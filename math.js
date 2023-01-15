@@ -8,7 +8,7 @@ const form = document.getElementById("form");
 const inp = document.getElementById("input");
 const score = document.getElementById("score");
 
-let sco = 0;
+let sco = +localStorage.getItem("sco");
 
 question.innerText = `What is the product of ${num1} and ${num2}?`;
 
@@ -20,9 +20,16 @@ form.addEventListener("submit", () => {
    if(result == correctAns){
 
     sco++;
+    localStorage(); 
 
    }else{
     sco--;
+    localStorage(); 
    }
 
 });
+
+function localStorage() {
+  localStorage.setItem("score", JSON.stringify(sco));
+
+}
