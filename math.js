@@ -9,6 +9,9 @@ const inp = document.getElementById("input");
 const score = document.getElementById("score");
 
 let sco = JSON.parse(localStorage.getItem("sco"));
+if(!sco){
+    sco = 0;
+}
 
 question.innerText = `What is the product of ${num1} and ${num2}?`;
 
