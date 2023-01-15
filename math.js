@@ -8,7 +8,7 @@ const form = document.getElementById("form");
 const inp = document.getElementById("input");
 const score = document.getElementById("score");
 
-let sco = +localStorage.getItem("sco");
+let sco = JSON.parse(localStorage.getItem("sco"));
 
 question.innerText = `What is the product of ${num1} and ${num2}?`;
 
