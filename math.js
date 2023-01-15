@@ -12,6 +12,7 @@ let sco = JSON.parse(localStorage.getItem("sco"));
 if(!sco){
     sco = 0;
 }
+score.innerText = `Score: ${sco}`;
 
 question.innerText = `What is the product of ${num1} and ${num2}?`;
 
@@ -20,19 +21,20 @@ const correctAns = num1 * num2;
 form.addEventListener("submit", () => {
    const result = +inp.value;
 
-   if(result == correctAns){
+   if(result === correctAns){
 
     sco++;
-    localStorage(); 
+    updateLocalStorage()
 
    }else{
     sco--;
-    localStorage(); 
+    updateLocalStorage()
    }
 
 });
 
-function localStorage() {
+function updateLocalStorage() {
   localStorage.setItem("score", JSON.stringify(sco));
 
 }
+
