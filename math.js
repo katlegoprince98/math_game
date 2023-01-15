@@ -6,6 +6,7 @@ const num2 = Math.ceil(Math.random() * 5);
 const question = document.getElementById("question");
 const form = document.getElementById("form");
 const inp = document.getElementById("input");
+const score = document.getElementById("score");
 
 let sco = 0;
 
