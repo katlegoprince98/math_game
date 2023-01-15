@@ -7,11 +7,21 @@ const question = document.getElementById("question");
 const form = document.getElementById("form");
 const inp = document.getElementById("input");
 
+let sco = 0;
+
 question.innerText = `What is the product of ${num1} and ${num2}?`;
 
 const correctAns = num1 * num2;
 
 form.addEventListener("submit", () => {
-   const result = inp.value;
+   const result = +inp.value;
+
+   if(result == correctAns){
+
+    sco++;
+
+   }else{
+    sco--;
+   }
 
 });
